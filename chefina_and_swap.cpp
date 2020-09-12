@@ -5,7 +5,7 @@ using namespace std;
 #define fo(i, n) for (ll i = 0; i < n; i++)
 #define Fo(i, k, n) for (ll i = k; k < n ? i < n : i > n; k < n ? i += 1 : i -= 1)
 #define ll long long
-#define si(x) scanf("%d", &x)
+//#define si(x) scanf("%d", &x)
 #define sl(x) scanf("%lld", &x)
 #define ss(s) scanf("%s", s)
 #define pi(x) printf("%d\n", x)
