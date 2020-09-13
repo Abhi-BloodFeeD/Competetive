@@ -1,12 +1,6 @@
-1 0 low - high 
 0
-1 1 low - high 
-0 val
-VAL==0 
 0
-2 1 low - high 
-0
-3 2 low - high 
-0
-5 4 low - high 
-0
+2
+2
+3
+3

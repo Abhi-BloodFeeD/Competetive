@@ -58,27 +58,20 @@ int main()
     w(t)
     {   
         ll n;cin>>n;
-        ll sum_n=(n*n+1)/2;
-        ll lll=((-1+sqrt(1+2*(n*n-1)))/2)+1;
-        ll hhh= floor((-1+ sqrt(1+2*(n*n+1)))/2);
-        ll ione =1;
-        ll l = max(lll,ione);
-        ll h = min(hhh,n);
+        ll sum_n=(n)*(n+1)/2;
+        ll sum_m=0;
         ll score=0;
-        cout<<l << " "<< h <<" low - high \n";
-        Fo(i,l,h+1){
-            ll sum_m=(i*i+1)/2;
-            ll val = (sum_n-2*sum_m)/2;
-            cout<<val<<" val"<<endl;
-            if(val>0 && val<n && val==(int)val)
-            {
-                score+=min({val,n-val,i});
-                cout<<"I "<<i<<" "<<score<<endl;
-            }
-            if(val==0){
+        Fo(i,1,n){
+            sum_m+=i;
+            long double val = (sum_n-2*sum_m)/2;
+            if(val<0)break;
+            if(val==0 && val==(ll)val){
                 score+=(i*i-1)/2;
                 score+=(n-i)*(n-i-1)/2;
-                cout<<"VAL==0 \n"; 
+            }
+            if(val>0 && val<n && val==(ll)val)
+            {
+                score+=min({(ll)val,(n-(ll)val),i,n-i});
             }
         }
         cout<<score<<endl;
