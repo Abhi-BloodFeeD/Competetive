@@ -57,10 +57,31 @@ int main()
     ////CODE HERE ----------/////
     w(t)
     {   
-        ll i;
-        cin>>i;
-        cout<<i+10<<endl;
-
+        ll n;cin>>n;
+        ll sum_n=(n*n+1)/2;
+        ll lll=((-1+sqrt(1+2*(n*n-1)))/2)+1;
+        ll hhh= floor((-1+ sqrt(1+2*(n*n+1)))/2);
+        ll ione =1;
+        ll l = max(lll,ione);
+        ll h = min(hhh,n);
+        ll score=0;
+        cout<<l << " "<< h <<" low - high \n";
+        Fo(i,l,h+1){
+            ll sum_m=(i*i+1)/2;
+            ll val = (sum_n-2*sum_m)/2;
+            cout<<val<<" val"<<endl;
+            if(val>0 && val<n && val==(int)val)
+            {
+                score+=min({val,n-val,i});
+                cout<<"I "<<i<<" "<<score<<endl;
+            }
+            if(val==0){
+                score+=(i*i-1)/2;
+                score+=(n-i)*(n-i-1)/2;
+                cout<<"VAL==0 \n"; 
+            }
+        }
+        cout<<score<<endl;
 
     }
 
