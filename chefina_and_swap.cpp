@@ -22,6 +22,7 @@ using namespace std;
 #define sortall(x) sort(all(x))
 #define tr(it, a) for (auto it = a.begin(); it != a.end(); it++)
 #define PI 3.1415926535897932384626
+#define w(t) ll t;cin >> t;while (t--)
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pl;
 typedef vector<int> vi;
@@ -30,7 +31,7 @@ typedef vector<pii> vpii;
 typedef vector<pl> vpl;
 typedef vector<vi> vvi;
 typedef vector<vl> vvl;
-mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
+    mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 int rng(int lim)
 {
     uniform_int_distribution<int> uid(0, lim - 1);
@@ -54,6 +55,16 @@ int main()
     freopen("output.txt", "w", stdout);
 #endif
     ////CODE HERE ----------/////
+    w(t)
+    {   
+        ll i;
+        cin>>i;
+        cout<<i+10<<endl;
+
+
+    }
 
     return 0;
 }
+
+ 
